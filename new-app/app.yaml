@@ -1,0 +1,27 @@
+command:
+  - "node"
+  - "dist-server/index.mjs"
+
+env:
+  - name: DATABRICKS_CATALOG
+    value: serverless_sandbox_admin_catalog
+  - name: DATABRICKS_SCHEMA
+    value: default
+  - name: DATABRICKS_WAREHOUSE_ID
+    value: 0b14e41d73a2ccf0
+  - name: GENIE_SPACE_ID
+    value: "01f1a24279411b67a8b2f4bfbde46a4f"
+  - name: SERVING_ENDPOINT
+    value: databricks-claude-sonnet-4-5
+  - name: MAINTENANCE_MODEL_ENDPOINT
+    value: volta-prediction-model
+  # Lakebase (autoscale) — persistência dos alertas gerados.
+  # LAKEBASE_USER não é setado: cai para DATABRICKS_CLIENT_ID (o SP do app).
+  - name: LAKEBASE_ENDPOINT
+    value: projects/volta-industrial/branches/production/endpoints/primary
+  - name: LAKEBASE_HOST
+    value: ep-shy-term-d1865g4y.database.us-west-2.cloud.databricks.com
+  - name: LAKEBASE_DB
+    value: volta
+  - name: LAKEBASE_SCHEMA
+    value: public

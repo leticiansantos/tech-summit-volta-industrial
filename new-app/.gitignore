@@ -1,0 +1,17 @@
+# Node
+node_modules/
+npm-debug.log*
+.env
+.env.local
+
+# Build output — keep client/dist for deployment
+# client/dist/  <- DO NOT ignore, it is deployed
+
+# Databricks
+.databricks/
+
+# IDE / OS
+.idea/
+.vscode/
+*.swp
+.DS_Store
